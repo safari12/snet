@@ -21,7 +21,7 @@ defmodule SNet.P2P.Payload do
 
   @spec decode(String.t()) :: {:ok, t} | {:error, atom()}
   def decode(input) do
-    case Poison.decode(input) do
+    case Poison.decode(input, as: %Payload{}) do
       {:ok, _} = result -> result
       {:error, {reason, _, _}} -> {:error, reason}
     end
