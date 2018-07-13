@@ -1,4 +1,5 @@
 defmodule SNet.P2P.Payload do
+
   alias SNet.P2P.Payload
 
   @ping "ping"
