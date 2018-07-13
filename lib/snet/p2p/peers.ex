@@ -1,4 +1,5 @@
 defmodule SNet.P2P.Peers do
+  use Agent
   @moduledoc """
     Agent that stores a list of connected peers
   """
